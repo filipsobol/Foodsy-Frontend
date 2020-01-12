@@ -1,36 +1,38 @@
 
 export default {
-    mode: 'universal',
+    mode: "universal",
 
     head: {
-        title: process.env.npm_package_name || '',
+        title: "Foodsy",
         meta: [
-            { charset: 'utf-8' },
-            { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+            { charset: "utf-8" },
+            { name: "viewport", content: "width=device-width, initial-scale=1" },
+            { hid: "description", name: "description", content: process.env.npm_package_description || "" }
         ],
         link: [
-            { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+            { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
         ]
     },
 
     loading: {
-        color: '#48BB78'
+        color: "#48BB78"
     },
 
-    css: [],
+    css: [
+        "@/assets/css/fonts.css",
+        "@/assets/css/main.css",
+    ],
 
     plugins: [],
 
     buildModules: [
-        '@nuxtjs/eslint-module',      // Doc: https://github.com/nuxt-community/eslint-module
-        '@nuxtjs/tailwindcss',        // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
+        "@nuxtjs/eslint-module",
+        "@nuxtjs/tailwindcss",
     ],
 
     modules: [
-        // Doc: https://axios.nuxtjs.org/usage
-        '@nuxtjs/axios',
-        '@nuxtjs/pwa'
+        "@nuxtjs/axios",
+        "@nuxtjs/pwa"
     ],
 
     axios: {},

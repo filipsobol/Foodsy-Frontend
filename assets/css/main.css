@@ -1,0 +1,13 @@
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
