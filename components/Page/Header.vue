@@ -1,9 +1,13 @@
 <template>
-    <div class="bg-white shadow">
+    <div class="bg-white shadow z-50 fixed w-full">
         <nav class="container mx-auto flex lg:flex-row flex-col justify-between p-4">
             <div class="flex lg:mr-6 text-gray-800">
                 <!-- Logo -->
-                <span class="font-semibold text-xl tracking-tight flex-grow">Foodsy</span>
+                <a
+                    href="/"
+                    class="font-semibold text-xl tracking-tight flex-grow px-3">
+                    Foodsy
+                </a>
 
                 <!-- Mobile hamburger -->
                 <button
@@ -20,21 +24,27 @@
                 :class="{ hidden: !menuOpen }"
                 class="flex flex-col flex-grow justify-center text-sm font-semibold text-gray-600 lg:flex lg:flex-row lg:items-center">
                 <a
-                    href="#responsive-header"
+                    href="#"
                     class="lg:mt-1 mt-4 lg:mr-8 border-b-2 border-transparent hover:border-green-500">
                     Strona główna
                 </a>
 
                 <a
-                    href="#responsive-header"
+                    href="#"
                     class="lg:mt-1 mt-4 lg:mr-8 border-b-2 border-transparent hover:border-green-500">
                     Blog
                 </a>
 
                 <a
-                    href="#responsive-header"
+                    href="#"
                     class="lg:mt-1 mt-4 lg:mr-8 border-b-2 border-transparent hover:border-green-500">
                     Dla firm
+                </a>
+
+                <a
+                    href="#"
+                    class="lg:mt-1 mt-4 lg:mr-8 border-b-2 border-transparent hover:border-green-500">
+                    O nas
                 </a>
             </div>
 

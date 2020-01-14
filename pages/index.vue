@@ -1,22 +1,18 @@
 <template>
-    <div class="min-h-screen bg-gray-100 font-sans flex flex-col">
-        <Header />
+    <div>
         <Search />
+        <HowItWorks />
     </div>
 </template>
 
 <script>
-import Header from "~/components/Page/Header.vue";
-import Search from "~/components/Page/Search.vue";
+import Search from "~/components/Index/Search.vue";
+import HowItWorks from "~/components/Index/HowItWorks.vue";
 
 export default {
     components: {
-        Header,
-        Search
+        Search,
+        HowItWorks
     },
 };
 </script>
-
-<style>
-
-</style>
