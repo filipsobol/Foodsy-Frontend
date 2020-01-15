@@ -10,7 +10,6 @@
                     v-for="elem in 4"
                     :key="elem"
                     class="lg:rounded shadow lg:w-1/4 w-10/12 lg:my-0 my-5 mx-3">
-
                     <img
                         class="w-full h-48 object-cover"
                         src="https://via.placeholder.com/300x200"
