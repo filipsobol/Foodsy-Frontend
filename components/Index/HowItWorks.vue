@@ -1,12 +1,12 @@
 <template>
-    <div class="bg-white border-b">
+    <div class="bg-white">
         <div class="container mx-auto py-16 text-center text-gray-800">
-            <p class="mb-6 text-2xl font-semibold tracking-wide">
+            <p class="mb-8 text-2xl font-semibold tracking-wide">
                 Jak to działa?
             </p>
 
-            <div class="w-full flex flex-row content-center">
-                <div class="step">
+            <div class="flex lg:flex-row flex-col items-center -mx-3">
+                <div class="step lg:w-1/3 w-10/12 lg:my-0 my-5 mx-3">
                     <img
                         src="/icons/directions.svg"
                         width="140"
@@ -17,7 +17,7 @@
                     <span class="description">Wpisz lub wybierz miasto z listy.<br>Pozwoli nam to wyświetlić dostępne produkty.</span>
                 </div>
 
-                <div class="step">
+                <div class="step lg:w-1/3 w-10/12 lg:my-0 my-5 mx-3">
                     <img
                         src="/icons/add_to_cart.svg"
                         width="130"
@@ -28,7 +28,7 @@
                     <span class="description">Dodaj ulubione produkty do koszyka.<br>Możesz wybrać kiedy mają być dostarczone.</span>
                 </div>
 
-                <div class="step">
+                <div class="step lg:w-1/3 w-10/12 lg:my-0 my-5 mx-3">
                     <img
                         src="/icons/pizza_sharing.svg"
                         width="180"
@@ -45,7 +45,6 @@
 
 <style lang="scss" scoped>
 .step {
-    @apply w-full;
     @apply flex;
     @apply flex-col;
     @apply items-center;

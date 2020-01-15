@@ -32,15 +32,18 @@
                     </button>
                 </label>
 
-                <div class="mt-12 flex flex-wrap">
+                <div class="mt-12 mx-16 flex justify-center flex-wrap">
                     <a href="#" class="tag">Łódź</a>
-                    <a href="#" class="tag tag-disabled">Warszawa</a>
-                    <a href="#" class="tag tag-disabled">Kraków</a>
-                    <a href="#" class="tag tag-disabled">Wrocław</a>
-                    <a href="#" class="tag tag-disabled">Gdańsk</a>
-                    <a href="#" class="tag tag-disabled">Bydgoszcz</a>
-                    <a href="#" class="tag tag-disabled">Poznań</a>
-                    <a href="#" class="tag tag-disabled">Katowice</a>
+                    <a href="#" class="tag">Warszawa</a>
+                    <a href="#" class="tag">Kraków</a>
+                    <a href="#" class="tag">Wrocław</a>
+                    <a href="#" class="tag">Gdańsk</a>
+                    <a href="#" class="tag">Gdynia</a>
+                    <a href="#" class="tag">Poznań</a>
+                    <a href="#" class="tag">Bydgoszcz</a>
+                    <a href="#" class="tag tag-disabled">Białystok</a>
+                    <a href="#" class="tag tag-disabled">Szczecin</a>
+                    <a href="#" class="tag tag-disabled">Lublin</a>
                 </div>
             </div>
         </div>

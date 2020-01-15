@@ -3,15 +3,19 @@
         <Header />
 
         <nuxt />
+
+        <Footer />
     </div>
 </template>
 
 <script>
 import Header from "~/components/Page/Header.vue";
+import Footer from "~/components/Page/Footer.vue";
 
 export default {
     components: {
         Header,
+        Footer,
     },
 };
 </script>
