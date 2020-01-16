@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-white shadow z-50 fixed w-full">
+    <div class="z-50 fixed w-full">
         <nav class="container mx-auto flex lg:flex-row flex-col justify-between p-4">
-            <div class="flex lg:mr-6 text-gray-800">
+            <div class="flex lg:mr-6 text-gray-100">
                 <!-- Logo -->
                 <a
                     href="/"
@@ -22,7 +22,7 @@
             <!-- Menu -->
             <div
                 :class="{ hidden: !menuOpen }"
-                class="flex flex-col flex-grow justify-center text-sm font-semibold text-gray-600 lg:flex lg:flex-row lg:items-center">
+                class="flex flex-col flex-grow justify-center text-sm font-semibold text-gray-100 lg:flex lg:flex-row lg:items-center">
                 <a
                     href="#"
                     class="lg:mt-1 mt-4 lg:mr-8 border-b-2 border-transparent hover:border-green-500">
@@ -79,7 +79,7 @@ export default {
 
 <style lang="scss">
 .btn-cart {
-    @apply text-gray-600;
+    @apply text-gray-100;
     @apply mr-8;
 
     &:hover {
@@ -90,7 +90,7 @@ export default {
 }
 
 .btn-user {
-    @apply text-gray-600;
+    @apply text-gray-100;
 
     &:hover {
         @apply text-green-500;

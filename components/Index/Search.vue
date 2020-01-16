@@ -1,20 +1,23 @@
 <template>
-    <div class="bg-gray-100 border-b">
-        <div class="container mx-auto flex flex-col items-center">
-            <div class="lg:w-2/3 py-48">
-                <div class="mx-auto text-center text-gray-800 font-light tracking-wide">
-                    <p class="text-5xl">
-                        Zamów jedzenie do pracy...
+    <div class="relative bg-black border-b overflow-hidden">
+        <img
+            src="https://images.pexels.com/photos/1907228/pexels-photo-1907228.jpeg"
+            alt="Banner"
+            class="banner">
+
+        <div class="relative flex flex-col">
+            <div class="content mx-auto w-5/12">
+                <div class="mx-auto text-center text-gray-100 font-light tracking-wide">
+                    <p class="text-5xl mb-2">
+                        Zamów <span class="underline font-semibold">śniadanie</span> lub <span class="underline font-semibold">obiad</span> do pracy
                     </p>
 
                     <p class="text-2xl">
-                        a dostawca
-                        <span class="underline">za darmo</span>
-                        dostarczy je do Twojego biurka
+                        z darmową dostawą do Twojego biurka
                     </p>
                 </div>
 
-                <label class="relative mt-12 flex">
+                <label class="relative mt-12 mx-32 flex">
                     <span class="icon">
                         <svg>
                             <use xlink:href="/icons/sprite.svg#search" />
@@ -32,7 +35,7 @@
                     </button>
                 </label>
 
-                <div class="mt-12 mx-16 flex justify-center flex-wrap">
+                <div class="mt-12 mx-64 flex justify-center flex-wrap">
                     <a href="#" class="tag">Łódź</a>
                     <a href="#" class="tag">Warszawa</a>
                     <a href="#" class="tag">Kraków</a>
@@ -41,9 +44,6 @@
                     <a href="#" class="tag">Gdynia</a>
                     <a href="#" class="tag">Poznań</a>
                     <a href="#" class="tag">Bydgoszcz</a>
-                    <a href="#" class="tag tag-disabled">Białystok</a>
-                    <a href="#" class="tag tag-disabled">Szczecin</a>
-                    <a href="#" class="tag tag-disabled">Lublin</a>
                 </div>
             </div>
         </div>
@@ -51,6 +51,20 @@
 </template>
 
 <style lang="scss" scoped>
+.banner {
+    @apply absolute;
+    @apply z-0;
+    @apply bg-cover;
+
+    top: -200px;
+    right: -200px;
+    opacity: 0.55;
+}
+
+.content {
+    padding: 16rem 0 24rem;
+}
+
 .icon {
     @apply absolute;
     @apply left-0;
@@ -67,9 +81,9 @@
     @apply pl-16;
     @apply pr-32;
     @apply rounded;
-    @apply bg-white;
+    @apply bg-gray-300;
     @apply border;
-    @apply shadow;
+    @apply shadow-2xl;
 
     &::placeholder {
         @apply text-gray-600;
@@ -80,7 +94,7 @@
     @apply absolute;
     @apply px-10;
     @apply rounded-r;
-    @apply bg-green-500;
+    @apply bg-green-600;
     @apply text-white;
     @apply text-sm;
 
@@ -99,23 +113,13 @@
     @apply mx-2;
     @apply mb-4;
     @apply rounded;
-    @apply bg-gray-300;
-    @apply text-gray-600;
+    @apply bg-green-600;
+    @apply text-green-100;
+    @apply shadow-2xl;
 
     &:hover {
-        @apply bg-green-500;
+        @apply bg-green-700;
         @apply text-white;
-    }
-
-    &-disabled {
-        @apply bg-gray-200;
-        @apply text-gray-400;
-
-        &:hover {
-            @apply bg-gray-200;
-            @apply text-gray-400;
-            @apply cursor-default;
-        }
     }
 }
 </style>
