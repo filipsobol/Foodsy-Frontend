@@ -1,7 +1,7 @@
 <template>
     <div class="z-50 fixed w-full">
         <nav class="container mx-auto flex lg:flex-row flex-col justify-between p-4">
-            <div class="flex lg:mr-6 text-gray-100">
+            <div class="flex lg:mr-6 text-gray-300">
                 <!-- Logo -->
                 <a
                     href="/"
@@ -12,7 +12,7 @@
                 <!-- Mobile hamburger -->
                 <button
                     @click="toggleMenu()"
-                    class="px-3 py-2 rounded border border-green-500 text-green-500 lg:hidden">
+                    class="px-3 py-2 rounded border border-gray-300 lg:hidden">
                     <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
                     </svg>
@@ -22,7 +22,7 @@
             <!-- Menu -->
             <div
                 :class="{ hidden: !menuOpen }"
-                class="flex flex-col flex-grow justify-center text-sm font-semibold text-gray-100 lg:flex lg:flex-row lg:items-center">
+                class="flex flex-col flex-grow justify-center text-sm font-semibold text-gray-300 lg:flex lg:flex-row lg:items-center uppercase">
                 <a
                     href="#"
                     class="lg:mt-1 mt-4 lg:mr-8 border-b-2 border-transparent hover:border-green-500">
@@ -79,7 +79,7 @@ export default {
 
 <style lang="scss">
 .btn-cart {
-    @apply text-gray-100;
+    @apply text-gray-300;
     @apply mr-8;
 
     &:hover {
@@ -90,7 +90,7 @@ export default {
 }
 
 .btn-user {
-    @apply text-gray-100;
+    @apply text-gray-300;
 
     &:hover {
         @apply text-green-500;
