@@ -19,7 +19,7 @@ export default {
     },
 
     css: [
-        "@/assets/css/fonts.css",
+        "@/assets/css/fonts.scss",
     ],
 
     plugins: [],

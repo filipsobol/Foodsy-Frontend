@@ -55,8 +55,7 @@
 
     width: 1600px;
     right: 0;
-    bottom: 0;
-    opacity: 0.7;
+    bottom: -50px;
 }
 
 .content {
@@ -64,7 +63,7 @@
     @apply flex;
     @apply flex-col;
 
-    background: linear-gradient(rgba(255, 255, 255, .08), rgba(255, 255, 255, .03))
+    background: linear-gradient(rgba(26, 32, 44, 1), rgba(26, 32, 44, .2));
 }
 
 .content > div {

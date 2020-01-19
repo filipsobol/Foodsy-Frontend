@@ -1,5 +1,5 @@
 <template>
-    <div class="z-50 fixed w-full">
+    <div class="bg-gray-900 z-50 fixed w-full">
         <nav class="container mx-auto flex lg:flex-row flex-col justify-between p-4">
             <div class="flex lg:mr-6 text-gray-300">
                 <!-- Logo -->
@@ -22,9 +22,9 @@
             <!-- Menu -->
             <div
                 :class="{ hidden: !menuOpen }"
-                class="flex flex-col flex-grow justify-center text-sm font-semibold text-gray-300 lg:flex lg:flex-row lg:items-center uppercase">
+                class="flex flex-col flex-grow justify-center text-sm text-gray-300 lg:flex lg:flex-row lg:items-center uppercase">
                 <a
-                    href="#"
+                    href="/"
                     class="lg:mt-1 mt-4 lg:mr-8 border-b-2 border-transparent hover:border-green-500">
                     Strona główna
                 </a>
