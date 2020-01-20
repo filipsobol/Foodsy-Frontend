@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-900 z-50 fixed w-full">
+    <div class="bg-gray-900 z-50 block lg:fixed w-full">
         <nav class="container mx-auto flex lg:flex-row flex-col justify-between p-4">
             <div class="flex lg:mr-6 text-gray-300">
                 <!-- Logo -->
@@ -12,10 +12,8 @@
                 <!-- Mobile hamburger -->
                 <button
                     @click="toggleMenu()"
-                    class="px-3 py-2 rounded border border-gray-300 lg:hidden">
-                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                    </svg>
+                    class="hamburger">
+                    <Icon name="menu" />
                 </button>
             </div>
 
@@ -46,25 +44,33 @@
                     class="lg:mt-1 mt-4 lg:mr-8 border-b-2 border-transparent hover:border-green-500">
                     O nas
                 </a>
+
+                <a
+                    href="#"
+                    class="lg:mt-1 mt-4 lg:mr-8 border-b-2 border-transparent hover:border-green-500 lg:hidden">
+                    Konto
+                </a>
             </div>
 
-            <button class="btn-cart">
-                <svg>
-                    <use xlink:href="/icons/sprite.svg#shopping-bag" />
-                </svg>
+            <button class="btn-cart hidden lg:block">
+                <Icon name="shopping-bag" />
             </button>
 
-            <button class="btn-user">
-                <svg>
-                    <use xlink:href="/icons/sprite.svg#user" />
-                </svg>
+            <button class="btn-user hidden lg:block">
+                <Icon name="user" />
             </button>
         </nav>
     </div>
 </template>
 
 <script>
+import Icon from "../common/Icon.vue";
+
 export default {
+    components: {
+        Icon,
+    },
+
     data: () => ({
         menuOpen: false,
     }),
@@ -78,6 +84,26 @@ export default {
 </script>
 
 <style lang="scss">
+.hamburger {
+    @apply px-3;
+    @apply py-2;
+    @apply rounded;
+    @apply border;
+    @apply border-gray-300;
+
+    svg {
+        @apply text-white;
+        @apply h-4;
+        @apply w-4;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hamburger {
+        @apply hidden;
+    }
+}
+
 .btn-cart {
     @apply text-gray-300;
     @apply mr-8;

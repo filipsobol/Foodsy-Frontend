@@ -6,6 +6,7 @@
         <nuxt />
 
         <Footer />
+        <Cart /> <!-- TODO: Show only if there are items in the cart -->
     </div>
 </template>
 
@@ -13,12 +14,14 @@
 import Header from "~/components/Page/Header.vue";
 import Search from "~/components/Index/Search.vue";
 import Footer from "~/components/Page/Footer.vue";
+import Cart from "~/components/Page/Cart.vue";
 
 export default {
     components: {
         Header,
         Search,
         Footer,
+        Cart,
     },
 };
 </script>

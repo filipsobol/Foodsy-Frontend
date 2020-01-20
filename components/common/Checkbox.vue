@@ -1,22 +1,25 @@
 <template>
-    <label class="checkbox">
+    <label>
         <input
             :value="inputValue"
             :checked="checked"
             @change="toggle($event.target.value)"
-            type="checkbox"
-            class="form-checkbox text-pink-600">
+            type="checkbox">
 
-        <svg>
-            <use xlink:href="/icons/sprite.svg#check" />
-        </svg>
+        <Icon name="check" />
 
-        <span class="ml-2">{{ label }}</span>
+        <span>{{ label }}</span>
     </label>
 </template>
 
 <script>
+import Icon from "../common/Icon.vue";
+
 export default {
+    components: {
+        Icon
+    },
+
     props: {
         value: {
             required: true,
@@ -61,63 +64,59 @@ export default {
 
 <style lang="scss" scoped>
 label {
-    &.checkbox {
-        @apply flex;
-        @apply flex-row;
-        @apply items-center;
-        @apply relative;
-        @apply cursor-pointer;
+    @apply flex;
+    @apply flex-row;
+    @apply items-center;
+    @apply relative;
+    @apply cursor-pointer;
+    @apply mb-1;
 
-        input {
-            @apply inline-block;
-            @apply w-5;
-            @apply h-5;
-            @apply mr-2;
-            @apply bg-white;
-            @apply border;
-            @apply rounded-sm;
+    input {
+        @apply inline-block;
+        @apply w-5;
+        @apply h-5;
+        @apply mr-2;
+        @apply bg-white;
+        @apply border;
+        @apply rounded-sm;
 
-            appearance: none;
-            user-select: none;
+        appearance: none;
+        user-select: none;
 
-            &:hover + svg {
-                @apply text-gray-300;
-            }
+        &:hover + svg {
+            @apply text-gray-300;
+        }
 
-            &:checked {
-                @apply border-gray-600;
+        &:checked {
+            @apply border-gray-600;
 
-                & + svg {
-                    @apply text-gray-600;
-                }
-            }
-
-            &:hover,
-            &:checked {
-                & + svg {
-                    @apply block;
-                    @apply absolute;
-                    @apply w-4;
-                    @apply h-4;
-
-                    top: .25rem;
-                    left: .15rem;
-                    stroke-width: 3;
-                }
+            & + svg {
+                @apply text-gray-600;
             }
         }
 
-        svg {
-            @apply hidden;
-        }
+        &:hover,
+        &:checked {
+            & + svg {
+                @apply block;
+                @apply absolute;
+                @apply w-4;
+                @apply h-4;
 
-        span {
-            @apply text-gray-900;
+                top: .25rem;
+                left: .15rem;
+                stroke-width: 3;
+            }
         }
     }
 
-    & + label {
-        @apply mt-1;
+    svg {
+        @apply hidden;
+    }
+
+    span {
+        @apply ml-2;
+        @apply text-gray-900;
     }
 }
 </style>

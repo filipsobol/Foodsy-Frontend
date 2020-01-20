@@ -19,9 +19,7 @@
 
                 <label class="relative mt-16 lg:mx-32 flex">
                     <span class="icon">
-                        <svg>
-                            <use xlink:href="/icons/sprite.svg#search" />
-                        </svg>
+                        <Icon name="search" />
                     </span>
 
                     <input
@@ -38,6 +36,16 @@
         </div>
     </div>
 </template>
+
+<script>
+import Icon from "../common/Icon.vue";
+
+export default {
+    components: {
+        Icon,
+    },
+};
+</script>
 
 <style lang="scss" scoped>
 .wrapper {

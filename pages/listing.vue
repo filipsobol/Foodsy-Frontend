@@ -26,7 +26,7 @@
 
                 <button
                     type="submit"
-                    class="bg-gray-300 text-gray-700 px-6 py-2 mt-6 rounded flex flex-row items-center">
+                    class="bg-gray-300 text-gray-700 px-6 py-2 mt-6 rounded">
                     Zastosuj
                 </button>
             </form>
@@ -35,9 +35,7 @@
                 <div class="flex flex-row">
                     <label class="lg:w-6/12 search">
                         <span class="icon">
-                            <svg>
-                                <use xlink:href="/icons/sprite.svg#search" />
-                            </svg>
+                            <Icon name="search" />
                         </span>
 
                         <input
@@ -54,10 +52,52 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col">
-                    <div>123</div>
-                    <div>123</div>
-                    <div>123</div>
+                <div class="flex flex-col mt-8 w-11/12 mx-auto lg:w-full">
+                    <div
+                        v-for="n in 10"
+                        :key="n"
+                        class="border border-gray-200 mb-4 flex flex-col lg:flex-row rounded-sm">
+                        <div
+                            class="flex-1 flex-initial w-full h-48 lg:w-48 lg:h-40 bg-cover bg-center border-r border-gray-200"
+                            style="background-image: url('/images/product.jpg')" />
+
+                        <div class="flex-1 flex flex-col py-2 mx-5 h-full">
+                            <p class="flex flex-row justify-between">
+                                <span class="title text-xl">Kanapka ze smakiem</span>
+
+                                <span class="rating flex flex-row items-center">
+                                    <span class="mr-1 font-semibold">4.8</span>
+                                    <Icon name="star" />
+                                </span>
+                            </p>
+
+                            <div class="text-gray-600 text-sm">
+                                <p class="supplier">
+                                    Pan Kanapek
+                                </p>
+
+                                <p class="description mt-2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, nulla.
+                                </p>
+                            </div>
+
+                            <div class="flex-grow flex flex-row lg:items-end justify-between mt-4">
+                                <button
+                                    type="button"
+                                    class="see-ingredients">
+                                    <span>Zobacz składniki</span>
+
+                                    <Icon name="info" />
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="bg-green-600 text-green-100 px-6 py-2 ml-2 rounded text-sm hover:bg-green-700">
+                                    Dodaj do koszyka
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,11 +105,13 @@
 </template>
 
 <script>
+import Icon from "../components/common/Icon.vue";
 import Checkbox from "../components/common/Checkbox.vue";
 import Select from "../components/common/Select.vue";
 
 export default {
     components: {
+        Icon,
         Checkbox,
         Select
     },
@@ -125,7 +167,6 @@ export default {
                 label: "Po cenie (malejąco)",
             },
         ],
-
         form: {
             categories: [],
             diets: [],
@@ -160,6 +201,42 @@ export default {
         &::placeholder {
             @apply text-gray-500;
         }
+    }
+}
+
+.rating {
+    svg {
+        @apply text-orange-500;
+        @apply fill-current;
+        @apply w-5;
+        @apply h-5;
+
+        stroke-width: 1.5;
+    }
+}
+
+.see-ingredients {
+    @apply flex;
+    @apply flex-row;
+    @apply py-1;
+    @apply px-3;
+    @apply justify-between;
+    @apply items-center;
+    @apply rounded;
+    @apply bg-gray-200;
+    @apply text-gray-700;
+    @apply text-sm;
+
+    svg {
+        @apply ml-2;
+        @apply w-5;
+        @apply h-5;
+
+        stroke-width: 1.5;
+    }
+
+    &:hover {
+        @apply bg-gray-400;
     }
 }
 </style>

@@ -21,26 +21,36 @@
                     <a href="#">Ipsum</a>
                 </div>
 
-                <div class="flex">
-                    <svg class="ml-6 text-white">
-                        <use xlink:href="/icons/sprite.svg#facebook" />
-                    </svg>
+                <div class="social">
+                    <Icon name="facebook" />
 
-                    <svg class="ml-6 text-white">
-                        <use xlink:href="/icons/sprite.svg#twitter" />
-                    </svg>
+                    <Icon name="twitter" />
 
-                    <svg class="ml-6 text-white">
-                        <use xlink:href="/icons/sprite.svg#youtube" />
-                    </svg>
+                    <Icon name="youtube" />
                 </div>
             </div>
         </div>
     </div>
 </template>
 
+<script>
+import Icon from "../common/Icon.vue";
+
+export default {
+    components: {
+        Icon
+    }
+};
+</script>
+
 <style lang="scss" scoped>
-svg {
-    stroke-width: 1.5;
+.social {
+    @apply flex;
+
+    svg {
+        @apply ml-4;
+
+        stroke-width: 1.5;
+    }
 }
 </style>

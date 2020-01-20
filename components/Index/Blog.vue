@@ -30,9 +30,8 @@
                             href="#"
                             class="flex-initial flex justify-start items-center my-4 text-sm font-semibold text-gray-700">
                             <span>Zobacz więcej</span>
-                            <svg class="ml-2 h-5 w-5">
-                                <use xlink:href="/icons/sprite.svg#arrow-right" />
-                            </svg>
+
+                            <Icon name="arrow-right" />
                         </a>
                     </div>
                 </div>
@@ -40,3 +39,13 @@
         </div>
     </div>
 </template>
+
+<script>
+import Icon from "../common/Icon.vue";
+
+export default {
+    components: {
+        Icon
+    }
+};
+</script>
