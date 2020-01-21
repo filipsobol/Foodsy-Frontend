@@ -117,6 +117,8 @@ label {
     span {
         @apply ml-2;
         @apply text-gray-900;
+
+        user-select: none;
     }
 }
 </style>

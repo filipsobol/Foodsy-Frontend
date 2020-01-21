@@ -3,7 +3,9 @@
         <div class="flex lg:flex-row flex-col -mx-2">
             <form class="lg:w-3/12 w-full px-2">
                 <div>
-                    <h4>Kategorie</h4>
+                    <h4 class="mb-1 font-semibold uppercase tracking-wide">
+                        Kategorie
+                    </h4>
 
                     <Checkbox
                         v-for="category in categories"
@@ -13,8 +15,10 @@
                         :input-value="category.value" />
                 </div>
 
-                <div class="mt-4">
-                    <h4>Dieta</h4>
+                <div class="mt-6">
+                    <h4 class="mb-1 font-semibold uppercase tracking-wide">
+                        Dieta
+                    </h4>
 
                     <Checkbox
                         v-for="diet in diets"
@@ -22,6 +26,19 @@
                         v-model="form.diets"
                         :label="diet.label"
                         :input-value="diet.value" />
+                </div>
+
+                <div class="mt-6">
+                    <h4 class="mb-1 font-semibold uppercase tracking-wide">
+                        Catering
+                    </h4>
+
+                    <Checkbox
+                        v-for="company in companies"
+                        :key="company.value"
+                        v-model="form.companies"
+                        :label="company.label"
+                        :input-value="company.value" />
                 </div>
 
                 <button
@@ -58,10 +75,10 @@
                         :key="n"
                         class="border border-gray-200 mb-4 flex flex-col lg:flex-row rounded-sm">
                         <div
-                            class="flex-1 flex-initial w-full h-48 lg:w-48 lg:h-40 bg-cover bg-center border-r border-gray-200"
+                            class="flex-initial w-full h-48 lg:w-48 lg:h-40 bg-cover bg-center border-r border-gray-200"
                             style="background-image: url('/images/product.jpg')" />
 
-                        <div class="flex-1 flex flex-col py-2 mx-5 h-full">
+                        <div class="flex-grow flex flex-col content-end py-2 px-5">
                             <p class="flex flex-row justify-between">
                                 <span class="title text-xl">Kanapka ze smakiem</span>
 
@@ -81,7 +98,7 @@
                                 </p>
                             </div>
 
-                            <div class="flex-grow flex flex-row lg:items-end justify-between mt-4">
+                            <div class="flex-grow flex flex-row lg:items-end justify-between mt-4 lg:mt-0">
                                 <button
                                     type="button"
                                     class="see-ingredients">
@@ -98,6 +115,21 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="pagination">
+                    <a href="#">
+                        <Icon name="chevron-left" />
+                    </a>
+                    <a href="#" class="active">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">...</a>
+                    <a href="#">8</a>
+                    <a href="#">9</a>
+                    <a href="#">
+                        <Icon name="chevron-right" />
+                    </a>
                 </div>
             </div>
         </div>
@@ -149,27 +181,38 @@ export default {
                 value: "bezglutenowa"
             }
         ],
+        companies: [
+            {
+                label: "Firma X",
+                value: "company_x"
+            },
+            {
+                label: "Firma Y",
+                value: "company_y"
+            },
+            {
+                label: "Firma Z",
+                value: "company_z"
+            }
+        ],
         sortBy: [
             {
-                value: "name_asc",
-                label: "Alfabetycznie [A-Z]",
+                value: "rating",
+                label: "Najwyższa ocena",
             },
             {
-                value: "name_desc",
-                label: "Alfabetycznie [Z-A]",
+                value: "price",
+                label: "Najniższa cena",
             },
             {
-                value: "price_asc",
-                label: "Po cenie (rosnąco)",
-            },
-            {
-                value: "price_desc",
-                label: "Po cenie (malejąco)",
+                value: "name",
+                label: "Alfabetycznie",
             },
         ],
         form: {
             categories: [],
             diets: [],
+            companies: [],
             sortBy: "",
         }
     })
@@ -237,6 +280,39 @@ export default {
 
     &:hover {
         @apply bg-gray-400;
+    }
+}
+
+.pagination {
+    @apply flex;
+    @apply flex-row;
+    @apply mt-6;
+    @apply justify-center;
+
+    a {
+        @apply flex;
+        @apply items-center;
+        @apply py-1;
+        @apply px-4;
+        @apply mx-1;
+        @apply rounded;
+        @apply bg-gray-300;
+        @apply text-gray-700;
+
+        svg {
+            @apply w-4;
+            @apply h-4;
+        }
+
+        &.active {
+            @apply bg-gray-700;
+            @apply text-gray-300;
+            @apply font-semibold;
+        }
+
+        &:hover {
+            @apply bg-gray-400;
+        }
     }
 }
 </style>
